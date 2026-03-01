@@ -1,0 +1,12 @@
+# Odoo environments
+__pycache__/
+*.pyc
+*.pyo
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs and DB files
+*.log
+filestore/
