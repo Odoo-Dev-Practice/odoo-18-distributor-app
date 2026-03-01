@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Asian Distributor Config",
+    'name': "Asian Distributor",
     'summary': """
         Módulo base para empresa importadora y distribuidora asiática.
     """,
@@ -11,10 +11,11 @@
     'author': "Fairw",
     'category': 'Sales/Custom',
     'version': '18.0.1.0.0',
-    'depends': ['sale_management', 'purchase', 'stock'],
+    'depends': ['base', 'stock'],
     'data': [
         # 'security/ir.model.access.csv',
         # 'views/product_template_views.xml',
+        'views/product_template_views.xml',
     ],
     'installable': True,
     'application': False,
