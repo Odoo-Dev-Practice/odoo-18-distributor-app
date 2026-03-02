@@ -75,6 +75,10 @@ El acceso será jerárquico a través de los grupos predefinidos de Odoo y modif
 - **Descripción:** El sistema controlará que la mercancía importada no aparezca como "Disponible para vender" de forma automática tras emitir la compra.
 - **Reglas de Negocio:** El inventario físico solo se sumará al sistema cuando el personal indique explícitamente haber recibido la transferencia de mercancía en el almacén.
 
+### RF-INV-004 Control de Dimensiones y Empaque B2B
+- **Descripción:** El sistema debe almacenar las medidas de cubicaje y pesos brutos necesarios para la logística internacional.
+- **Reglas de Negocio:** Se deben capturar: Unidades por Master Carton, Unidades por Inner Carton, CBM por caja (con 4 decimales) y Peso Bruto por caja. Estos campos son la base para futuros cálculos de contenedores.
+
 ## 3.2. Módulo de Compras
 
 ### RF-COM-001 Emisión de Orden de Compra Internacional
