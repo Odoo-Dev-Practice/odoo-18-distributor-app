@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_view_form_inherit_asian_distributor" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.asian.distributor</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <!-- Inject the computed field as invisible before the price_unit -->
+                <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="before">
+                    <field name="is_price_editable" column_invisible="1"/>
+                </xpath>
+                
+                <!-- Make price_unit readonly based on the computed field -->
+                <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="attributes">
+                    <attribute name="readonly">not is_price_editable</attribute>
+                    <!-- Also consider forcing force_save="1" if Odoo needs to save computed prices from backend -->
+                    <attribute name="force_save">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
