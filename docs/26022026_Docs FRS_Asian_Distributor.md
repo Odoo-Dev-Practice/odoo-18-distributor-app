@@ -31,6 +31,10 @@ La ficha del producto es la pantalla central del sistema. Su comportamiento visu
     *   Contendrá los campos estándar: Tipo de Producto, Categoría, Precio de Venta, Coste, Referencia Interna y Código de Barras.
     *   **Nuevo Comportamiento:** Exactamente debajo del "Código de Barras", existirá un campo obligatorio llamado "País de Origen". Este campo será un control de autocompletado con menú desplegable.
 *   **Botones de Acción (Guardar/Editar):** Estarán visibles en la esquina superior izquierda únicamente si el usuario tiene el rol de Administrador o Analista de Compras.
+*   **Pestaña [Logística B2B] (Nueva):**
+    *   Exclusiva para datos técnicos de importación masiva.
+    *   **Dimensiones:** Campos "CBM por Caja" (precisión 4 decimales) y "Peso Bruto Máster (kg)".
+    *   **Empaque:** Campos "Unidades por Master Carton" y "Unidades por Inner Carton".
 
 ## 2.2. Vistas de Lista (Catálogos)
 Al ingresar al menú de Productos y visualizar el catálogo en formato de lista (tabla):
@@ -54,7 +58,8 @@ Esta funcionalidad describe cómo el área de compras registra un nuevo bien adq
     5. El usuario hace clic en el campo desplegable "País de Origen".
     6. El sistema muestra una lista de todos los países del mundo.
     7. El usuario escribe "Jap" y el sistema filtra mostrando "Japón". Selecciona "Japón".
-    8. Hace clic en el icono de la nube o fuera del formulario para autoguardar.
+    8. Hace clic en la pestaña "Logística B2B" e ingresa que el producto viene en cajas de 50 unidades (`Master Carton`) con un volumen de `0.0450 CBM`.
+    9. Hace clic en el icono de la nube o fuera del formulario para autoguardar.
 *   **Regla de Validación (Excepción):** Si el usuario intenta guardar el registro dejando el campo "País de Origen" en blanco, el sistema teñirá el borde del campo en rojo y mostrará una alerta emergente evitando el guardado: *"Campos inválidos: País de Origen"*.
 
 ## 3.2. Funcionalidad: Recepción de Mercancía de Asia
