@@ -6,9 +6,26 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view" />
             <field name="arch" type="xml">
+                <!-- Country of origin injection -->
                 <xpath expr="//field[@name='barcode']" position="after">
                     <field name="country_of_origin_id" groups="asian_distributor.group_asian_distributor_purchasing_analyst, 
                         asian_distributor.group_asian_distributor_manager"/>
+                </xpath>
+
+                <!-- Cartonization injection -->
+                <xpath expr="//notebook" position="inside">
+                    <page name="b2b_logistics" string="B2B Logistics">
+                        <group>
+                            <group string="Box Dimensions">
+                                <field name="cbm_per_box"/>
+                                <field name="gross_weight_per_box"/>
+                            </group>
+                            <group string="Packaging Configuration">
+                                <field name="units_per_master_carton"/>
+                                <field name="units_per_inner_carton"/>
+                            </group>
+                        </group> 
+                    </page>
                 </xpath>
             </field>
         </record>
