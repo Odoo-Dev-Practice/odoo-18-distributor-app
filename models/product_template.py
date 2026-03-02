@@ -4,7 +4,7 @@ class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
     # General
-    country_of_origin_id = fields.Many2one('res.country', string='Country of Origin', help='Country of Origin')
+    country_of_origin_id = fields.Many2one('res.country', string='Country of Origin', help='Country of Origin', required=True, tracking=True)
 
     # Cartonization
     units_per_master_carton = fields.Integer(string='Units per Master Carton', help='Number of units per master carton')
