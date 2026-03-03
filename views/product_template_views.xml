@@ -13,7 +13,9 @@
 
                 <!-- Cartonization injection -->
                 <xpath expr="//notebook" position="inside">
-                    <page name="b2b_logistics" string="B2B Logistics">
+                    <page name="b2b_logistics" string="B2B Logistics"
+                        groups="asian_distributor.group_asian_distributor_purchasing_analyst,
+                                asian_distributor.group_asian_distributor_manager">
                         <group>
                             <group string="Box Dimensions">
                                 <field name="cbm_per_box"/>
